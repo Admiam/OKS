@@ -1,0 +1,195 @@
+[
+  {
+    "rqs": {
+      "name": "Funkčnost formuláře - hlavní tok",
+      "prefix": "RQS.01",
+      "description": "<p>Oček&aacute;van&aacute; funkčnost formul&aacute;ře - hlavn&iacute; tok (Happy day scenario)</p>",
+      "rqmList": [
+      {
+        "rqm": {
+          "name": "Happy day scenario",
+          "prefix": "RQM.01.01",
+          "description": "<ul><li>po stisku tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong><ul><li>vyp&iacute;&scaron;e dolů do formul&aacute;ře label <strong>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo</strong> n&aacute;sledovan&yacute; vygenerovan&yacute;m osobn&iacute;m č&iacute;slem</li></ul></li><li>osobn&iacute; č&iacute;slo na ZČU se sest&aacute;v&aacute; z pěti (&scaron;esti) č&aacute;st&iacute; - FrrTppppfN, např. A12B0987P, kde:<ul><li>F = Fakulta<ul><li>A = FAV - Fakulta aplikovan&yacute;ch věd</li><li>D = FDU - Fakulta designu a uměn&iacute; Ladislava Sutnara</li><li>K = FEK - Fakulta ekonomick&aacute;</li><li>E = FEL - Fakulta elektrotechnick&aacute;</li><li>F = FF - Fakulta filosofick&aacute;</li><li>P = FPE - Fakulta pedagogick&aacute;</li><li>R = FPR - Fakulta pr&aacute;vnick&aacute;</li><li>S = FST - Fakulta strojn&iacute;</li><li>Z = FZS - Fakulta zdravotnick&yacute;ch studi&iacute;</li></ul></li><li>rr = rok n&aacute;stupu na studia<ul><li>posledn&iacute; dvojč&iacute;sl&iacute; roku n&aacute;stupu na studia</li><li>jsou ignorov&aacute;ny b&iacute;l&eacute; znaky na zač&aacute;tku a na konci zadan&eacute;ho řetězce<ul><li>tyto b&iacute;l&eacute; znaky jsou po odesl&aacute;n&iacute; formul&aacute;ře ze zadan&eacute;ho řetězce bez varov&aacute;n&iacute; odstraněny</li></ul></li></ul></li><li>T = typ studia<ul><li>B = bakal&aacute;řsk&yacute;</li><li>N = navazuj&iacute;c&iacute;</li><li>P = doktorsk&yacute;</li><li>M = magistersk&yacute;</li></ul></li><li>pppp = pořadov&eacute; č&iacute;slo<ul><li>čtyřm&iacute;stn&eacute; č&iacute;slo s nev&yacute;znamov&yacute;mi nulami, zač&iacute;n&aacute; od 0001</li><li>jsou ignorov&aacute;ny b&iacute;l&eacute; znaky na zač&aacute;tku a na konci zadan&eacute;ho řetězce<ul><li>tyto b&iacute;l&eacute; znaky jsou po odesl&aacute;n&iacute; formul&aacute;ře ze zadan&eacute;ho řetězce bez varov&aacute;n&iacute; odstraněny</li></ul></li></ul></li><li>f = forma studia<ul><li>P = prezenčn&iacute;</li><li>K = kombinovan&aacute;</li><li>D = distančn&iacute;</li></ul></li><li>N = nepovinn&eacute;<ul><li>je-li položka vybr&aacute;na, bude na konci v&yacute;sledn&eacute;ho osobn&iacute;ho č&iacute;sla p&iacute;smeno <strong>I</strong> jako označen&iacute; mezin&aacute;rodn&iacute;ch (international) studentů</li></ul></li></ul></li></ul>"
+        }
+      },
+      {
+        "rqm": {
+          "name": "Vymazání formuláře",
+          "prefix": "RQM.01.02",
+          "description": "<ul><li>po stisku tlač&iacute;tka <strong>Vymaž formul&aacute;ř</strong><ul><li>vymaže obě vstupn&iacute; pole a nastav&iacute; jim zobrazen&eacute; n&aacute;povědy</li><li>oba v&yacute;běrov&eacute; seznamy nastav&iacute; na předvyplněn&eacute; hodnody</li><li>v bloku radio-buttonů nebude vybr&aacute;na ž&aacute;dn&aacute; hodnota</li><li>check-box nebude vybr&aacute;n</li><li>v&scaron;echna př&iacute;padn&aacute; chybov&aacute; hl&aacute;&scaron;en&iacute; vypsan&aacute; při předchoz&iacute;m generov&aacute;n&iacute; budou vymaz&aacute;na</li><li>bude vymaz&aacute;no i př&iacute;padn&eacute; v&yacute;sledn&eacute; vygenerovan&eacute; osobn&iacute; č&iacute;slo včetně sv&eacute;ho labelu</li></ul></li></ul>"
+        }
+      }
+    ]
+    }
+  },
+  {
+    "rqs": {
+      "name": "Záložky",
+      "prefix": "RQS.02",
+      "description": "<p>Z&aacute;ložky aplikace - &Uacute;vod, Osobn&iacute; č&iacute;slo, N&aacute;pověda</p>",
+      "rqmList": [
+      {
+        "rqm": {
+          "name": "Úvod",
+          "prefix": "RQM.02.01",
+          "description": "<p>Existuje funkčn&iacute; z&aacute;ložka &Uacute;vod</p>"
+        }
+      },
+      {
+        "rqm": {
+          "name": "Generování",
+          "prefix": "RQM.02.02",
+          "description": "<p>Existuje funkčn&iacute; z&aacute;ložka Generov&aacute;n&iacute;</p>"
+        }
+      },
+      {
+        "rqm": {
+          "name": "Nápověda",
+          "prefix": "RQM.02.03",
+          "description": "<p>Existuje funkčn&iacute; z&aacute;ložka N&aacute;pověda</p>"
+        }
+      }
+    ]
+    }
+  },
+  {
+    "rqs": {
+      "name": "Stránka Úvod",
+      "prefix": "RQS.03",
+      "description": "<p>Str&aacute;nka &Uacute;vod</p>",
+      "rqmList": [
+      {
+        "rqm": {
+          "name": "Odkaz na KIV/OKS",
+          "prefix": "RQM.03.01",
+          "description": "<p>Funkčn&iacute; odkaz na webovou str&aacute;nku s informacemi o předmětu KIV/OKS (na univerzitn&iacute;m Port&aacute;lu)</p>"
+        }
+      },
+      {
+        "rqm": {
+          "name": "Odkaz na KIV",
+          "prefix": "RQM.03.02",
+          "description": "<p>Funkčn&iacute; odkaz na webovou str&aacute;nku KIV - http://www.kiv.zcu.cz/</p>"
+        }
+      },
+      {
+        "rqm": {
+          "name": "Odkaz na ZČU",
+          "prefix": "RQM.03.03",
+          "description": "<p>Funkčn&iacute; odkaz na webovou str&aacute;nku ZČU - http://www.zcu.cz/</p>"
+        }
+      }
+    ]
+    }
+  },
+  {
+    "rqs": {
+      "name": "Stránka Generování",
+      "prefix": "RQS.04",
+      "description": "<p>Str&aacute;nka Generov&aacute;n&iacute;</p>",
+      "rqsList": [
+      {
+        "rqs": {
+          "name": "Položky formuláře",
+          "prefix": "RQS.04.01",
+          "description": "<p>Specifikuje v&scaron;echny položky formul&aacute;ře a jejich pořad&iacute;</p>",
+          "rqmList": [
+          {
+          "rqm": {
+            "name": "Fakulta",
+            "prefix": "RQM.04.01.01",
+            "description": "<ul><li>povinn&aacute; položka</li><li>tool-tip: <strong>Vyberte fakultu</strong></li><li>realizov&aacute;na pomoc&iacute; v&yacute;běrov&eacute;ho seznamu s položkami:<ul><li><strong>--- neuvedeno ---</strong></li><li><strong>FAV - Fakulta aplikovan&yacute;ch věd</strong></li><li><strong>FDU - Fakulta designu a uměn&iacute; Ladislava Sutnara</strong></li><li><strong>FEK - Fakulta ekonomick&aacute;</strong></li><li><strong>FEL - Fakulta elektrotechnick&aacute;</strong></li><li><strong>FF - Fakulta filosofick&aacute;</strong></li><li><strong>FPE - Fakulta pedagogick&aacute;</strong></li><li><strong>FPR - Fakulta pr&aacute;vnick&aacute;</strong></li><li><strong>FST - Fakulta strojn&iacute;</strong></li><li><strong>FZS - Fakulta zdravotnick&yacute;ch studi&iacute;</strong></li></ul></li><li>položka <strong>--- neuvedeno ---</strong> je předvybr&aacute;na<br />&nbsp;</li></ul>"
+          }
+          },
+          {
+          "rqm": {
+            "name": "Vymaž",
+            "prefix": "RQM.04.01.08",
+            "description": "<ul><li>realizov&aacute;no pomoc&iacute; tlač&iacute;tka</li><li>tool-tip: <strong>Vymaz&aacute;n&iacute; v&scaron;ech hodnot</strong></li><li>po&scaron;le zpr&aacute;vu serveru</li></ul>"
+          }
+          }
+        ]
+        }
+      },
+      {
+        "rqs": {
+          "name": "Funkčnost - možnosti parametrů",
+          "prefix": "RQS.04.02",
+          "description": "<p>Možn&eacute; hodnoty jednotliv&yacute;ch vstupn&iacute;ch parametrů</p>",
+          "rqmList": [
+          {
+          "rqm": {
+            "name": "Fakulta",
+            "prefix": "RQM.04.02.01",
+            "description": "<p>Vyzkou&scaron;et možnosti pro každou fakultu</p><ul><li>A = FAV - Fakulta aplikovan&yacute;ch věd</li><li>D = FDU - Fakulta designu a uměn&iacute; Ladislava Sutnara</li><li>K = FEK - Fakulta ekonomick&aacute;</li><li>E = FEL - Fakulta elektrotechnick&aacute;</li><li>F = FF - Fakulta filosofick&aacute;</li><li>P = FPE - Fakulta pedagogick&aacute;</li><li>R = FPR - Fakulta pr&aacute;vnick&aacute;</li><li>S = FST - Fakulta strojn&iacute;</li><li>Z = FZS - Fakulta zdravotnick&yacute;ch studi&iacute;</li></ul>"
+          }
+          },
+          {
+          "rqm": {
+            "name": "Zahraniční student",
+            "prefix": "RQM.04.02.06",
+            "description": "<p>Vyzkou&scaron;et možnost pro zahraničn&iacute;ho studenta - na konci osobn&iacute;ho č&iacute;sla je I</p>"
+          }
+          }
+        ]
+        }
+      },
+      {
+        "rqs": {
+          "name": "Funkčnost - alternativní toky",
+          "prefix": "RQS.04.03",
+          "description": "<p>Alternativn&iacute; toky formul&aacute;ře</p>",
+          "rqmList": [
+          {
+          "rqm": {
+            "name": "Fakulta",
+            "prefix": "RQM.04.03.01",
+            "description": "<p>Pokud nen&iacute; po stisku tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong> vybr&aacute;na někter&aacute; z nab&iacute;zen&yacute;ch fakult:</p><ul><li>v&yacute;běrov&yacute; seznam bude červeně or&aacute;mov&aacute;n</li><li>vpravo se v červen&eacute;m r&aacute;mečku objev&iacute; <strong>Fakulta nezvolena</strong></li></ul>"
+          }
+          },
+          {
+          "rqm": {
+            "name": "Generuj osobní číslo",
+            "prefix": "RQM.04.03.05",
+            "description": "<p>Po stisku tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong> v př&iacute;padě zad&aacute;n&iacute;:</p><ul><li>nespr&aacute;vn&yacute;ch hodnot:<ul><li>vyp&iacute;&scaron;e hlavn&iacute; chybov&eacute; hl&aacute;&scaron;en&iacute;<ul><li>je-li jak&aacute;koliv vstupn&iacute; položka chybně vyplněna, vyp&iacute;&scaron;e pod formul&aacute;řem červeně: <strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong></li></ul></li><li>každ&aacute; konkr&eacute;tn&iacute; vstupn&iacute; položka s nevalidn&iacute;mi hodnotami je zv&yacute;razněna a je u n&iacute; vyps&aacute;n podrobněj&scaron;&iacute; popis chyby<ul><li>způsob zv&yacute;razněn&iacute; a jednotliv&aacute; detailn&iacute; chybov&aacute; hl&aacute;&scaron;en&iacute; jsou pops&aacute;na u každ&eacute; položky - viz jednotliv&eacute; alternativn&iacute; toky</li></ul></li></ul></li><li>nevyplněn&eacute;ho jak&eacute;hokoliv povinn&eacute;ho pole:<ul><li>toto se považuje za jeden z př&iacute;padů v&yacute;&scaron;e popsan&yacute;ch nespr&aacute;vn&yacute;ch hodnot</li></ul></li></ul>"
+          }
+          }
+        ]
+        }
+      },
+      {
+        "rqs": {
+          "name": "Funkčnost - Vymaž",
+          "prefix": "RQS.04.04",
+          "description": "<p>Vymaže položky formul&aacute;ře</p>",
+          "rqmList": [
+          {
+          "rqm": {
+            "name": "Vymazání formuláře",
+            "prefix": "RQM.04.04.01",
+            "description": "<p>Po stisku tlač&iacute;tka <strong>Vymaž</strong></p><ul><li>vymaže obě vstupn&iacute; pole a nastav&iacute; jim zobrazen&eacute; n&aacute;povědy</li><li>oba v&yacute;běrov&eacute; seznamy nastav&iacute; na předvyplněn&eacute; hodnody</li><li>v bloku radio-buttonů nebude vybr&aacute;na ž&aacute;dn&aacute; hodnota</li><li>check-box nebude vybr&aacute;n</li><li>v&scaron;echna př&iacute;padn&aacute; chybov&aacute; hl&aacute;&scaron;en&iacute; vypsan&aacute; při předchoz&iacute;m generov&aacute;n&iacute; budou vymaz&aacute;na</li><li>bude vymaz&aacute;no i př&iacute;padn&eacute; v&yacute;sledn&eacute; vygenerovan&eacute; osobn&iacute; č&iacute;slo včetně sv&eacute;ho labelu</li></ul>"
+          }
+          }
+        ]
+        }
+      }
+    ]
+    }
+  },
+  {
+    "rqs": {
+      "name": "Stránka Nápověda",
+      "prefix": "RQS.05",
+      "description": "<p>Str&aacute;nka N&aacute;pověda</p>",
+      "rqmList": [
+      {
+        "rqm": {
+          "name": "Odkaz na Generování",
+          "prefix": "RQM.05.01",
+          "description": "<p>Funkčn&iacute; odkaz na str&aacute;nku Generov&aacute;n&iacute;</p>"
+        }
+      }
+    ]
+    }
+  }
+]

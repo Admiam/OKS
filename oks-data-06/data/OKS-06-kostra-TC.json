@@ -1,0 +1,911 @@
+[
+  {
+    "ts": {
+      "name": "Funkčnost formuláře - hlavní tok",
+      "prefix": "TS.01",
+      "description": "<p>Testy funkčnosti - hlavn&iacute; tok</p>",
+      "tcList": [
+      {
+        "tc": {
+          "name": "Happy day scenario",
+          "prefix": "TC.01.01",
+          "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani<br />&nbsp;</p>",
+          "description": "<p>Happy day scenario</p>",
+          "importance": "medium",
+          "nature": "functional",
+          "type": "compliance",
+          "steps": [
+            {
+              "action": "<p>Nastavte vstupn&iacute; hodnoty:</p><table align='left' border='1' cellpadding='1' cellspacing='1' style='width: 300px;'><tbody><tr><td>Fakulta</td><td>FAV</td></tr><tr><td>Rok n&aacute;stupu na ZČU</td><td>15</td></tr><tr><td>Typ studia</td><td>bakal&aacute;řsk&yacute;</td></tr><tr><td>Pořadov&eacute; č&iacute;slo</td><td>123</td></tr><tr><td>Forma studia</td><td>prezenčn&iacute;</td></tr></tbody></table><p>&nbsp;</p>",
+              "expected_result": "<execution_type>1</execution_type></step>"
+            },            {
+              "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+              "expected_result": "<p>Dole na str&aacute;nce se objev&iacute;:</p><p><strong>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo: A15B0123P</strong></p>"
+            }
+          ],
+          "verified_requirements": [ ]
+          }
+      },
+      {
+        "tc": {
+          "name": "Vymazání formuláře",
+          "prefix": "TC.01.02",
+          "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Pr&aacute;vě proběhl TC.01.01 Happy day scenario</p>",
+          "description": "<p>Vymaz&aacute;n&iacute; formul&aacute;ře</p>",
+          "importance": "medium",
+          "nature": "functional",
+          "type": "compliance",
+          "steps": [
+            {
+              "action": "<p>Stisk tlač&iacute;tka <strong>Vymaž</strong></p>",
+              "expected_result": "<p>V&yacute;běrov&yacute; seznam <strong>Fakulta </strong>je nastaven na hodnotu&nbsp; <strong>--- neuvedeno ---</strong></p>"
+            },            {
+              "action": "<p>Vstupn&iacute; pole <strong>Rok n&aacute;stupu na ZČU</strong> m&aacute; hodnotu 08</p>",
+              "expected_result": "<p>Vstupn&iacute; pole <strong>Rok n&aacute;stupu na ZČU</strong> m&aacute; hodnotu 08</p>"
+            },            {
+              "action": "<p>V&yacute;běrov&yacute; seznam <strong>Typ studia </strong>je nastaven na hodnotu&nbsp; <strong>bakal&aacute;řsk&yacute;</strong></p>",
+              "expected_result": "<p>V&yacute;běrov&yacute; seznam <strong>Typ studia </strong>je nastaven na hodnotu&nbsp; <strong>bakal&aacute;řsk&yacute;</strong></p>"
+            },            {
+              "action": "<p>Vstupn&iacute; pole <strong>Pořadov&eacute; č&iacute;slo</strong> m&aacute; hodnotu 0001</p>",
+              "expected_result": "<p>Vstupn&iacute; pole <strong>Pořadov&eacute; č&iacute;slo</strong> m&aacute; hodnotu 0001</p>"
+            },            {
+              "action": "<p>Blok radio-buttonů <strong>Forma studia</strong> nem&aacute; vybranou ž&aacute;dnou položku</p>",
+              "expected_result": "<p>Blok radio-buttonů <strong>Forma studia</strong> nem&aacute; vybranou ž&aacute;dnou položku</p>"
+            },            {
+              "action": "<p>Check-box <strong>Zahraničn&iacute; student</strong> nen&iacute; za&scaron;krtnut</p>",
+              "expected_result": "<p>Check-box <strong>Zahraničn&iacute; student</strong> nen&iacute; za&scaron;krtnut</p>"
+            },            {
+              "action": "<p>Je vymaz&aacute;no vygenerovan&eacute; osobn&iacute; č&iacute;slo včetně labelu <strong><label for='vysledek' id='label_vysledek' title='Výsledné osobní číslo'>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo:</label></strong></p><p>&nbsp;</p>",
+              "expected_result": "<p>Je vymaz&aacute;no vygenerovan&eacute; osobn&iacute; č&iacute;slo včetně labelu <strong><label for='vysledek' id='label_vysledek' title='Výsledné osobní číslo'>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo:</label></strong></p><p>&nbsp;</p>"
+            }
+          ],
+          "verified_requirements": [ ]
+          }
+      }
+    ]
+    }
+  },
+  {
+    "ts": {
+      "name": "Záložky",
+      "prefix": "TS.02",
+      "description": "<p>Test existence z&aacute;ložek <strong>&Uacute;vod</strong>, <strong>Generov&aacute;n&iacute;</strong>, <strong>N&aacute;pověda</strong></p>",
+      "tcList": [
+      {
+        "tc": {
+          "name": "Úvod",
+          "prefix": "TC.02.01",
+          "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo</p><p>&nbsp;</p>",
+          "description": "<p>Existence z&aacute;ložky<b> &Uacute;vod</b></p>",
+          "importance": "medium",
+          "nature": "functional",
+          "type": "compliance",
+          "steps": [
+            {
+              "action": "<p>Kliknut&iacute; na z&aacute;ložku <strong>&Uacute;vod</strong></p>",
+              "expected_result": "<p>Zobraz&iacute; se str&aacute;nka <strong>&Uacute;vod</strong></p>"
+            }
+          ],
+          "verified_requirements": [ ]
+          }
+      },
+      {
+        "tc": {
+          "name": "Generování",
+          "prefix": "TC.02.02",
+          "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo</p>",
+          "description": "<p>Existence z&aacute;ložky <strong>Generov&aacute;n&iacute;</strong></p>",
+          "importance": "medium",
+          "nature": "functional",
+          "type": "compliance",
+          "steps": [
+            {
+              "action": "<p>Kliknut&iacute; na z&aacute;ložku <strong>Generov&aacute;n&iacute;</strong></p>",
+              "expected_result": "<p>Zobraz&iacute; se str&aacute;nka <strong>Generov&aacute;n&iacute;</strong></p>"
+            }
+          ],
+          "verified_requirements": [ ]
+          }
+      },
+      {
+        "tc": {
+          "name": "Nápověda",
+          "prefix": "TC.02.03",
+          "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo</p>",
+          "description": "<p>Existence z&aacute;ložky <strong>N&aacute;pověda</strong></p>",
+          "importance": "medium",
+          "nature": "functional",
+          "type": "compliance",
+          "steps": [
+            {
+              "action": "<p>Kliknut&iacute; na z&aacute;ložku <strong>N&aacute;pověda</strong></p>",
+              "expected_result": "<p>Zobraz&iacute; se str&aacute;nka <strong>N&aacute;pověda</strong></p>"
+            }
+          ],
+          "verified_requirements": [ ]
+          }
+      }
+    ]
+    }
+  },
+  {
+    "ts": {
+      "name": "Úvod",
+      "prefix": "TS.03",
+      "description": "<p>Testy na str&aacute;nce <strong>&Uacute;vod</strong></p>",
+      "tcList": [
+      {
+        "tc": {
+          "name": "Odkaz na KIV/OKS",
+          "prefix": "TC.03.01",
+          "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Uvod</p>",
+          "description": "<p>Spr&aacute;vnost odkazu na str&aacute;nku předmětu KIV/OKS</p>",
+          "importance": "medium",
+          "nature": "functional",
+          "type": "compliance",
+          "steps": [
+            {
+              "action": "<p>Kliknut&iacute; na odkaz <strong>Ověřov&aacute;n&iacute; kvality software (KIV/OKS)</strong></p>",
+              "expected_result": "<p>Zobraz&iacute; se str&aacute;nka předmětu na Port&aacute;le v Courseware</p>"
+            }
+          ],
+          "verified_requirements": [ ]
+          }
+      },
+      {
+        "tc": {
+          "name": "Odkaz na KIV",
+          "prefix": "TC.03.02",
+          "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Uvod</p>",
+          "description": "<p>Spr&aacute;vnost odkazu na str&aacute;nku KIV - www.kiv.zcu.cz</p>",
+          "importance": "medium",
+          "nature": "functional",
+          "type": "compliance",
+          "steps": [
+            {
+              "action": "<p>Kliknut&iacute; na odkaz <strong>Katedře informatiky a v&yacute;početn&iacute; techniky</strong></p>",
+              "expected_result": "<p>Zobraz&iacute; se str&aacute;nka www.kiv.zcu.cz</p>"
+            }
+          ],
+          "verified_requirements": [ ]
+          }
+      },
+      {
+        "tc": {
+          "name": "Odkaz na ZČU",
+          "prefix": "TC.03.03",
+          "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Uvod</p>",
+          "description": "<p>Spr&aacute;vnost odkazu na str&aacute;nku ZČU - www.zcu.cz</p>",
+          "importance": "medium",
+          "nature": "functional",
+          "type": "compliance",
+          "steps": [
+            {
+              "action": "<p>Kliknut&iacute; na odkaz<strong> Z&aacute;padočesk&eacute; univerzitě v Plzni</strong></p>",
+              "expected_result": "<p>Zobraz&iacute; se str&aacute;nka www.zcu.cz</p>"
+            }
+          ],
+          "verified_requirements": [ ]
+          }
+      }
+    ]
+    }
+  },
+  {
+    "ts": {
+      "name": "Generování",
+      "prefix": "TS.04",
+      "description": "<p>Testy na str&aacute;nce <strong>Generov&aacute;n&iacute;</strong></p>",
+      "tsList": [
+      {
+        "ts": {
+          "name": "Položky formuláře",
+          "prefix": "TS.04.01",
+          "description": "<p>Testy existence položek formul&aacute;ře</p>",
+          "tcList": [
+          {
+          "tc": {
+            "name": "Fakulta",
+            "prefix": "TC.04.01.01",
+            "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p>",
+            "description": "<p>Existence v&yacute;běrov&eacute;ho seznamu, labelu, tool-tipů a v&scaron;ech položek seznamu</p>",
+            "importance": "medium",
+            "nature": "functional",
+            "type": "compliance",
+            "steps": [
+              {
+                "action": "<p>Existuje label <strong>Fakulta</strong>, označen&yacute; * jako povinn&aacute; položka</p>",
+                "expected_result": "<execution_type>1</execution_type></step>"
+              },              {
+                "action": "<p>Existuje v&yacute;běrov&yacute; seznam s předvybranou položkou <strong>--- neuvedeno ---</strong></p>",
+                "expected_result": "<execution_type>1</execution_type></step>"
+              },              {
+                "action": "<p>Položky v&yacute;běrov&eacute;ho seznamu jsou v pořad&iacute;:</p>",
+                "expected_result": "<execution_type>1</execution_type></step>"
+              },              {
+                "action": "<p><strong>--- neuvedeno ---</strong></p>",
+                "expected_result": "<execution_type>1</execution_type></step>"
+              },              {
+                "action": "<p><strong>FAV - Fakulta aplikovan&yacute;ch věd</strong></p>",
+                "expected_result": "<execution_type>1</execution_type></step>"
+              },              {
+                "action": "<p><strong>FDU - Fakulta designu a uměn&iacute; Ladislava Sutnara</strong></p>",
+                "expected_result": "<execution_type>1</execution_type></step>"
+              },              {
+                "action": "<p><strong>FEK - Fakulta ekonomick&aacute;</strong></p>",
+                "expected_result": "<execution_type>1</execution_type></step>"
+              },              {
+                "action": "<p><strong>FEL - Fakulta elektrotechnick&aacute;</strong></p>",
+                "expected_result": "<execution_type>1</execution_type></step>"
+              },              {
+                "action": "<p><strong>FF&nbsp; - Fakulta filosofick&aacute;</strong></p>",
+                "expected_result": "<execution_type>1</execution_type></step>"
+              },              {
+                "action": "<p><strong>FPE - Fakulta pedagogick&aacute;</strong></p>",
+                "expected_result": "<execution_type>1</execution_type></step>"
+              },              {
+                "action": "<p><strong>FPR - Fakulta pr&aacute;vnick&aacute;</strong></p>",
+                "expected_result": "<execution_type>1</execution_type></step>"
+              },              {
+                "action": "<p><strong>FST - Fakulta strojn&iacute;</strong></p>",
+                "expected_result": "<execution_type>1</execution_type></step>"
+              },              {
+                "action": "<p><strong>FZS - Fakulta zdravotnick&yacute;ch studi&iacute;</strong></p>",
+                "expected_result": "<execution_type>1</execution_type></step>"
+              },              {
+                "action": "<p>Label m&aacute; tool-tip</p>",
+                "expected_result": "<p><strong>Vyberte fakultu</strong></p>"
+              },              {
+                "action": "<p>V&yacute;běrov&yacute; seznam m&aacute; tool-tip</p>",
+                "expected_result": "<p><strong>Vyberte fakultu</strong></p>"
+              }
+            ],
+            "verified_requirements": [ ]
+            }
+          },
+          {
+          "tc": {
+            "name": "Vymaž",
+            "prefix": "TC.04.01.08",
+            "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani<br />&nbsp;</p>",
+            "description": "<p>Existence tlač&iacute;tka a tool-tipu<br />&nbsp;</p>",
+            "importance": "medium",
+            "nature": "functional",
+            "type": "compliance",
+            "steps": [
+              {
+                "action": "<p>Existuje tlač&iacute;tko <strong>Vymaž</strong><br />&nbsp;</p>",
+                "expected_result": "<execution_type>1</execution_type></step>"
+              },              {
+                "action": "<p>Tlač&iacute;tko m&aacute; tool-tip</p>",
+                "expected_result": "<p><strong>Vymaz&aacute;n&iacute; v&scaron;ech hodnot</strong></p>"
+              }
+            ],
+            "verified_requirements": [ ]
+            }
+          }
+        ]
+        }
+      },
+      {
+        "ts": {
+          "name": "Funkčnost - možnosti parametrů",
+          "prefix": "TS.04.02",
+          "description": "<p>Možnosti jednotliv&yacute;ch vstupn&iacute;ch parametrů</p>",
+          "tsList": [
+          {
+          "ts": {
+            "name": "Možnosti fakult",
+            "prefix": "TS.04.02.01",
+            "description": "<p>Možn&eacute; volby fakult</p>",
+            "tcList": [
+            {
+            "tc": {
+              "name": "FAV",
+              "prefix": "TC.04.02.01.01",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Jsou nastaveny tyto vstupn&iacute; hodnoty:</p><table align='center' border='1' cellpadding='1' cellspacing='1'><tbody><tr><td>Rok n&aacute;stupu na ZČU</td><td>15</td></tr><tr><td>Typ studia</td><td>bakal&aacute;řsk&yacute;</td></tr><tr><td>Pořadov&eacute; č&iacute;slo</td><td>123</td></tr><tr><td>Forma studia</td><td>prezenčn&iacute;</td></tr></tbody></table><p>&nbsp;</p>",
+              "description": "<p>FAV - Fakulta aplikovan&yacute;ch věd</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Nastavte v&yacute;běrov&yacute; seznam <strong>Fakulta </strong>na hodnotu <strong>FAV - Fakulta aplikovan&yacute;ch věd</strong></p><p>&nbsp;</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Dole na str&aacute;nce se objev&iacute;:</p><p><strong>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo: A15B0123P</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            },
+            {
+            "tc": {
+              "name": "FZS",
+              "prefix": "TC.04.02.01.09",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Jsou nastaveny tyto vstupn&iacute; hodnoty:</p><table align='center' border='1' cellpadding='1' cellspacing='1'><tbody><tr><td>Rok n&aacute;stupu na ZČU</td><td>15</td></tr><tr><td>Typ studia</td><td>bakal&aacute;řsk&yacute;</td></tr><tr><td>Pořadov&eacute; č&iacute;slo</td><td>123</td></tr><tr><td>Forma studia</td><td>prezenčn&iacute;</td></tr></tbody></table><p>&nbsp;</p>",
+              "description": "<p>FZS - Fakulta zdravotnick&yacute;ch studi&iacute;</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Nastavte v&yacute;běrov&yacute; seznam <strong>Fakulta </strong>na hodnotu <strong>FZS - Fakulta zdravotnick&yacute;ch studi&iacute;</strong></p><p>&nbsp;</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Dole na str&aacute;nce se objev&iacute;:</p><p><strong>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo: Z15B0123P</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            }
+          ]
+          }
+          },
+          {
+          "ts": {
+            "name": "Možnosti roku nástupu na ZČU",
+            "prefix": "TS.04.02.02",
+            "description": "<p>Možnosti roku n&aacute;stupu na ZČU</p>",
+            "tcList": [
+            {
+            "tc": {
+              "name": "Rok 00",
+              "prefix": "TC.04.02.02.01",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Jsou nastaveny tyto vstupn&iacute; hodnoty:</p><table align='center' border='1' cellpadding='1' cellspacing='1'><tbody><tr><td>Fakulta</td><td>FAV</td></tr><tr><td>Typ studia</td><td>navazuj&iacute;c&iacute;</td></tr><tr><td>Pořadov&eacute; č&iacute;slo</td><td>9876</td></tr><tr><td>Forma studia</td><td>kombinovan&aacute;</td></tr></tbody></table><p>&nbsp;</p>",
+              "description": "<p>Rok 2000</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Nastavte vstupn&iacute; textov&eacute; pole <strong>Rok n&aacute;stupu na ZČU</strong><strong> </strong>na hodnotu 00</p><p>&nbsp;</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Dole na str&aacute;nce se objev&iacute;:</p><p><strong>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo: A00N9876K</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            },
+            {
+            "tc": {
+              "name": "Rok 18_",
+              "prefix": "TC.04.02.02.07",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Jsou nastaveny tyto vstupn&iacute; hodnoty:</p><table align='center' border='1' cellpadding='1' cellspacing='1'><tbody><tr><td>Fakulta</td><td>FAV</td></tr><tr><td>Typ studia</td><td>navazuj&iacute;c&iacute;</td></tr><tr><td>Pořadov&eacute; č&iacute;slo</td><td>9876</td></tr><tr><td>Forma studia</td><td>kombinovan&aacute;</td></tr></tbody></table><p>&nbsp;</p>",
+              "description": "<p>Rok 2018 s mezerou za</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Nastavte vstupn&iacute; textov&eacute; pole <strong>Rok n&aacute;stupu na ZČU</strong><strong> </strong>na hodnotu 18&lt;mezera&gt;</p><p>&nbsp;</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Dole na str&aacute;nce se objev&iacute;:</p><p><strong>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo: A18N9876K</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            }
+          ]
+          }
+          },
+          {
+          "ts": {
+            "name": "Možnosti typů studia",
+            "prefix": "TS.04.02.03",
+            "description": "<p>Možnosti typů studia</p>",
+            "tcList": [
+            {
+            "tc": {
+              "name": "Bakalářský",
+              "prefix": "TC.04.02.03.01",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Jsou nastaveny tyto vstupn&iacute; hodnoty:</p><table align='center' border='1' cellpadding='1' cellspacing='1'><tbody><tr><td>Fakulta</td><td>FEL</td></tr><tr><td>Rok n&aacute;stupu na ZČU</td><td>14</td></tr><tr><td>Pořadov&eacute; č&iacute;slo</td><td>0099</td></tr><tr><td>Forma studia</td><td>distančn&iacute;</td></tr></tbody></table><p>&nbsp;</p>",
+              "description": "<p>Bakal&aacute;řsk&yacute;</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Nastavte v&yacute;běrov&yacute; seznam <strong>Typ studia </strong>na hodnotu <strong>bakal&aacute;řsk&yacute;</strong></p><p>&nbsp;</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Dole na str&aacute;nce se objev&iacute;:</p><p><strong>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo: E14B0099D</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            },
+            {
+            "tc": {
+              "name": "Magisterský",
+              "prefix": "TC.04.02.03.04",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Jsou nastaveny tyto vstupn&iacute; hodnoty:</p><table align='center' border='1' cellpadding='1' cellspacing='1'><tbody><tr><td>Fakulta</td><td>FEL</td></tr><tr><td>Rok n&aacute;stupu na ZČU</td><td>14</td></tr><tr><td>Pořadov&eacute; č&iacute;slo</td><td>0099</td></tr><tr><td>Forma studia</td><td>distančn&iacute;</td></tr></tbody></table><p>&nbsp;</p>",
+              "description": "<p>Magistersk&yacute;</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Nastavte v&yacute;běrov&yacute; seznam <strong>Typ studia </strong>na hodnotu <strong>magistersk&yacute;</strong></p><p>&nbsp;</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Dole na str&aacute;nce se objev&iacute;:</p><p><strong>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo: E14M0099D</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            }
+          ]
+          }
+          },
+          {
+          "ts": {
+            "name": "Možnosti pořadového čísla",
+            "prefix": "TS.04.02.04",
+            "description": "<p>Možnosti pořadov&eacute;ho č&iacute;sla</p>",
+            "tcList": [
+            {
+            "tc": {
+              "name": "Pořadí 1",
+              "prefix": "TC.04.02.04.01",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Jsou nastaveny tyto vstupn&iacute; hodnoty:</p><table align='center' border='1' cellpadding='1' cellspacing='1'><tbody><tr><td>Fakulta</td><td>FPE</td></tr><tr><td>Rok n&aacute;stupu na ZČU</td><td>08</td></tr><tr><td>Typ studia</td><td>magistersk&yacute;</td></tr><tr><td>Forma studia</td><td>prezenčn&iacute;</td></tr></tbody></table><p>&nbsp;</p>",
+              "description": "<p>Pořad&iacute; 1</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Nastavte vstupn&iacute; textov&eacute; pole <strong>Pořadov&eacute; č&iacute;slo</strong><strong> </strong>na hodnotu 1</p><p>&nbsp;</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Dole na str&aacute;nce se objev&iacute;:</p><p><strong>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo: P08M0001P</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            },
+            {
+            "tc": {
+              "name": "Pořadí 123_",
+              "prefix": "TC.04.02.04.10",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Jsou nastaveny tyto vstupn&iacute; hodnoty:</p><table align='center' border='1' cellpadding='1' cellspacing='1'><tbody><tr><td>Fakulta</td><td>FPE</td></tr><tr><td>Rok n&aacute;stupu na ZČU</td><td>08</td></tr><tr><td>Typ studia</td><td>magistersk&yacute;</td></tr><tr><td>Forma studia</td><td>prezenčn&iacute;</td></tr></tbody></table><p>&nbsp;</p>",
+              "description": "<p>Pořad&iacute; 123 s mezerou za</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Nastavte vstupn&iacute; textov&eacute; pole <strong>Pořadov&eacute; č&iacute;slo</strong><strong> </strong>na hodnotu 123&lt;mezera&gt;</p><p>&nbsp;</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Dole na str&aacute;nce se objev&iacute;:</p><p><strong>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo: P08M0123P</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            }
+          ]
+          }
+          },
+          {
+          "ts": {
+            "name": "Možnosti formy studia",
+            "prefix": "TS.04.02.05",
+            "description": "<p>Možnosti formy studia</p>",
+            "tcList": [
+            {
+            "tc": {
+              "name": "Prezenční",
+              "prefix": "TC.04.02.05.01",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Jsou nastaveny tyto vstupn&iacute; hodnoty:</p><table align='center' border='1' cellpadding='1' cellspacing='1'><tbody><tr><td>Fakulta</td><td>FZS</td></tr><tr><td>Rok n&aacute;stupu na ZČU</td><td>20</td></tr><tr><td>Typ studia</td><td>bakal&aacute;řsk&yacute;</td></tr><tr><td>Pořadov&eacute; č&iacute;slo</td><td>0101</td></tr></tbody></table><p>&nbsp;</p>",
+              "description": "<p>Prezenčn&iacute;</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Nastavte radio-button <strong>Forma studia </strong>na hodnotu <strong>prezenčn&iacute;</strong></p><p>&nbsp;</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Dole na str&aacute;nce se objev&iacute;:</p><p><strong>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo: Z20B0101P</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            },
+            {
+            "tc": {
+              "name": "Distanční",
+              "prefix": "TC.04.02.05.03",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Jsou nastaveny tyto vstupn&iacute; hodnoty:</p><table align='center' border='1' cellpadding='1' cellspacing='1'><tbody><tr><td>Fakulta</td><td>FZS</td></tr><tr><td>Rok n&aacute;stupu na ZČU</td><td>20</td></tr><tr><td>Typ studia</td><td>bakal&aacute;řsk&yacute;</td></tr><tr><td>Pořadov&eacute; č&iacute;slo</td><td>0101</td></tr></tbody></table><p>&nbsp;</p>",
+              "description": "<p>Distančn&iacute;</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Nastavte radio-button <strong>Forma studia </strong>na hodnotu <strong>distančn&iacute;</strong></p><p>&nbsp;</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Dole na str&aacute;nce se objev&iacute;:</p><p><strong>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo: Z20B0101D</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            }
+          ]
+          }
+          },
+          {
+          "ts": {
+            "name": "Možnosti zahraničního studenta",
+            "prefix": "TS.04.02.06",
+            "description": "<p>Možnosti zahraničn&iacute;ho studenta</p>",
+            "tcList": [
+            {
+            "tc": {
+              "name": "Zahraniční student NE",
+              "prefix": "TC.04.02.06.01",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Jsou nastaveny tyto vstupn&iacute; hodnoty:</p><table align='center' border='1' cellpadding='1' cellspacing='1'><tbody><tr><td>Fakulta</td><td>FST</td></tr><tr><td>Rok n&aacute;stupu na ZČU</td><td>15</td></tr><tr><td>Typ studia</td><td>bakal&aacute;řsk&yacute;</td></tr><tr><td>Pořadov&eacute; č&iacute;slo</td><td>0001</td></tr><tr><td>Forma studia</td><td>prezenčn&iacute;</td></tr></tbody></table><p>&nbsp;</p>",
+              "description": "<p>Zahraničn&iacute; student NE</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Check-box <strong>Zahraničn&iacute; student</strong> nen&iacute; vybr&aacute;n</p><p>&nbsp;</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Dole na str&aacute;nce se objev&iacute;:</p><p><strong>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo: S15B0001P</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            },
+            {
+            "tc": {
+              "name": "Zahraniční student ANO",
+              "prefix": "TC.04.02.06.02",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Jsou nastaveny tyto vstupn&iacute; hodnoty:</p><table align='center' border='1' cellpadding='1' cellspacing='1'><tbody><tr><td>Fakulta</td><td>FST</td></tr><tr><td>Rok n&aacute;stupu na ZČU</td><td>15</td></tr><tr><td>Typ studia</td><td>bakal&aacute;řsk&yacute;</td></tr><tr><td>Pořadov&eacute; č&iacute;slo</td><td>0001</td></tr><tr><td>Forma studia</td><td>prezenčn&iacute;</td></tr></tbody></table><p>&nbsp;</p>",
+              "description": "<p>Zahraničn&iacute; student ANO</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Check-box <strong>Zahraničn&iacute; student</strong> je vybr&aacute;n (za&scaron;krtnut)</p><p>&nbsp;</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Dole na str&aacute;nce se objev&iacute;:</p><p><strong>V&yacute;sledn&eacute; osobn&iacute; č&iacute;slo: S15B0001PI</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            }
+          ]
+          }
+          }
+        ]
+        }
+      },
+      {
+        "ts": {
+          "name": "Funkčnost - alternativní toky",
+          "prefix": "TS.04.03",
+          "description": "<p>Testy funkčnosti - alternativn&iacute; toky</p>",
+          "tsList": [
+          {
+          "ts": {
+            "name": "Alternativy Fakulta",
+            "prefix": "TS.04.03.01",
+            "description": "<p>Reakce na chybov&eacute; vstupy u Fakulta</p>",
+            "tcList": [
+            {
+            "tc": {
+              "name": "Fakulta nevybrána",
+              "prefix": "TC.04.03.01.01",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Hodnoty nastaven&eacute; u ostatn&iacute;ch vstupn&iacute;ch položek nejsou pro toto TC relevantn&iacute;</p>",
+              "description": "<p>Test oček&aacute;van&eacute; reakce - nen&iacute; vybr&aacute;na ž&aacute;dn&aacute; z nab&iacute;zen&yacute;ch fakult</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Ve v&yacute;běrov&eacute;m seznamu <strong>Fakulta </strong>je vybr&aacute;na položka <strong>--- neuvedeno ---</strong></p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>V&yacute;běrov&yacute; seznam bude červeně or&aacute;mov&aacute;n</p>"
+                },                {
+                  "action": "<expectedresults><![CDATA[<p>Vpravo se v červen&eacute;m r&aacute;mečku objev&iacute; <strong>Fakulta nezvolena</strong></p>",
+                  "expected_result": "<p>Vpravo se v červen&eacute;m r&aacute;mečku objev&iacute; <strong>Fakulta nezvolena</strong></p>"
+                },                {
+                  "action": "<p>Pod formul&aacute;řem se vyp&iacute;&scaron;e červeně:<br /><strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong></p>",
+                  "expected_result": "<p>Pod formul&aacute;řem se vyp&iacute;&scaron;e červeně:<br /><strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            }
+          ]
+          }
+          },
+          {
+          "ts": {
+            "name": "Alternativy Rok nástupu",
+            "prefix": "TS.04.03.02",
+            "description": "<p>Reakce na chybov&eacute; vstupy u Rok n&aacute;stupu na ZČU</p>",
+            "tcList": [
+            {
+            "tc": {
+              "name": "Rok nezadán",
+              "prefix": "TC.04.03.02.01",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Hodnoty nastaven&eacute; u ostatn&iacute;ch vstupn&iacute;ch položek nejsou pro toto TC relevantn&iacute;</p>",
+              "description": "<p>Test oček&aacute;van&eacute; reakce - rok nen&iacute; zad&aacute;n</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Ve vstupn&iacute;m textov&eacute;m poli <strong>Rok n&aacute;stupu na ZČU</strong> nebyla dosud zad&aacute;na ž&aacute;dn&aacute; hodnota. Je tam vidět původn&iacute; n&aacute;pověda form&aacute;tu s hodnotou 08.</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Vstupn&iacute; pole bude červeně or&aacute;mov&aacute;no</p>"
+                },                {
+                  "action": "<p>Vpravo se v červen&eacute;m r&aacute;mečku objev&iacute; <strong>Pr&aacute;zdn&yacute; vstup</strong></p>",
+                  "expected_result": "<p>Vpravo se v červen&eacute;m r&aacute;mečku objev&iacute; <strong>Pr&aacute;zdn&yacute; vstup</strong></p>"
+                },                {
+                  "action": "<p>Pod formul&aacute;řem se vyp&iacute;&scaron;e červeně:<br /><strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong></p>",
+                  "expected_result": "<p>Pod formul&aacute;řem se vyp&iacute;&scaron;e červeně:<br /><strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            },
+            {
+            "tc": {
+              "name": "Rok vědecká notace E",
+              "prefix": "TC.04.03.02.11",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Hodnoty nastaven&eacute; u ostatn&iacute;ch vstupn&iacute;ch položek nejsou pro toto TC relevantn&iacute;</p>",
+              "description": "<p>Test oček&aacute;van&eacute; reakce - rok vědeck&aacute; notace E</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Ve vstupn&iacute;m textov&eacute;m poli <strong>Rok n&aacute;stupu na ZČU</strong> je zad&aacute;na hodnota 1E2</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Vstupn&iacute; pole bude červeně or&aacute;mov&aacute;no a je v něm hodnota 1E2</p>"
+                },                {
+                  "action": "<p>Vpravo se v červen&eacute;m r&aacute;mečku objev&iacute; <strong>Nepovolen&yacute; z&aacute;pis č&iacute;sla</strong></p>",
+                  "expected_result": "<p>Vpravo se v červen&eacute;m r&aacute;mečku objev&iacute; <strong>Nepovolen&yacute; z&aacute;pis č&iacute;sla</strong></p>"
+                },                {
+                  "action": "<p>Pod formul&aacute;řem se vyp&iacute;&scaron;e červeně:<br /><strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong></p>",
+                  "expected_result": "<p>Pod formul&aacute;řem se vyp&iacute;&scaron;e červeně:<br /><strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            }
+          ]
+          }
+          },
+          {
+          "ts": {
+            "name": "Alternativy Pořadové číslo",
+            "prefix": "TS.04.03.03",
+            "description": "<p>Reakce na chybov&eacute; vstupy u Pořadov&eacute; č&iacute;slo</p>",
+            "tcList": [
+            {
+            "tc": {
+              "name": "Pořadové číslo nezadáno",
+              "prefix": "TC.04.03.03.01",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Hodnoty nastaven&eacute; u ostatn&iacute;ch vstupn&iacute;ch položek nejsou pro toto TC relevantn&iacute;</p>",
+              "description": "<p>Test oček&aacute;van&eacute; reakce - Pořadov&eacute; č&iacute;slo nezad&aacute;no</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Ve vstupn&iacute;m textov&eacute;m poli <strong>Pořadov&eacute; č&iacute;slo</strong> nebyla dosud zad&aacute;na ž&aacute;dn&aacute; hodnota. Je tam vidět původn&iacute; n&aacute;pověda form&aacute;tu s hodnotou 0001.</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Vstupn&iacute; pole bude červeně or&aacute;mov&aacute;no</p>"
+                },                {
+                  "action": "<p>Vpravo se v červen&eacute;m r&aacute;mečku objev&iacute; <strong>Pr&aacute;zdn&yacute; vstup</strong></p>",
+                  "expected_result": "<p>Vpravo se v červen&eacute;m r&aacute;mečku objev&iacute; <strong>Pr&aacute;zdn&yacute; vstup</strong></p>"
+                },                {
+                  "action": "<p>Pod formul&aacute;řem se vyp&iacute;&scaron;e červeně:<br /><strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong></p>",
+                  "expected_result": "<p>Pod formul&aacute;řem se vyp&iacute;&scaron;e červeně:<br /><strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            },
+            {
+            "tc": {
+              "name": "Pořadové číslo vědecká notace E",
+              "prefix": "TC.04.03.03.14",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Hodnoty nastaven&eacute; u ostatn&iacute;ch vstupn&iacute;ch položek nejsou pro toto TC relevantn&iacute;</p>",
+              "description": "<p>Test oček&aacute;van&eacute; reakce - Pořadov&eacute; č&iacute;slo je ve vědeck&eacute; notaci E</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>Ve vstupn&iacute;m textov&eacute;m poli <strong>Pořadov&eacute; č&iacute;slo</strong> je zad&aacute;na hodnota 12E1</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Vstupn&iacute; pole bude červeně or&aacute;mov&aacute;no a je v něm hodnota 12E1</p>"
+                },                {
+                  "action": "<p>Vpravo se v červen&eacute;m r&aacute;mečku objev&iacute; <strong>Nepovolen&yacute; z&aacute;pis č&iacute;sla</strong><br />&nbsp;</p>",
+                  "expected_result": "<p>Vpravo se v červen&eacute;m r&aacute;mečku objev&iacute; <strong>Nepovolen&yacute; z&aacute;pis č&iacute;sla</strong><br />&nbsp;</p>"
+                },                {
+                  "action": "<p>Pod formul&aacute;řem se vyp&iacute;&scaron;e červeně:<br /><strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong></p>",
+                  "expected_result": "<p>Pod formul&aacute;řem se vyp&iacute;&scaron;e červeně:<br /><strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            }
+          ]
+          }
+          },
+          {
+          "ts": {
+            "name": "Alternativy Forma studia",
+            "prefix": "TS.04.03.04",
+            "description": "<p>Reakce na chybov&eacute; vstupy u Forma studia</p>",
+            "tcList": [
+            {
+            "tc": {
+              "name": "Forma studia nevybrána",
+              "prefix": "TC.04.03.04.01",
+              "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Hodnoty nastaven&eacute; u ostatn&iacute;ch vstupn&iacute;ch položek nejsou pro toto TC relevantn&iacute;</p>",
+              "description": "<p>Test oček&aacute;van&eacute; reakce - nen&iacute; vybr&aacute;na ž&aacute;dn&aacute; z nab&iacute;zen&yacute;ch forem studia</p>",
+              "importance": "medium",
+              "nature": "functional",
+              "type": "compliance",
+              "steps": [
+                {
+                  "action": "<p>V radio-bloku <strong>Forma studia</strong> nen&iacute; vybr&aacute;na ž&aacute;dn&aacute; položka</p>",
+                  "expected_result": "<execution_type>1</execution_type></step>"
+                },                {
+                  "action": "<p>Stisk tlač&iacute;tka <strong>Generuj osobn&iacute; č&iacute;slo</strong></p>",
+                  "expected_result": "<p>Vpravo se v červen&eacute;m r&aacute;mečku objev&iacute; <strong>Forma nezvolena</strong></p>"
+                },                {
+                  "action": "<p>Pod formul&aacute;řem se vyp&iacute;&scaron;e červeně:<br /><strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong></p>",
+                  "expected_result": "<p>Pod formul&aacute;řem se vyp&iacute;&scaron;e červeně:<br /><strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong></p>"
+                }
+              ],
+              "verified_requirements": [ ]
+              }
+            }
+          ]
+          }
+          }
+        ]
+        }
+      },
+      {
+        "ts": {
+          "name": "Funkčnost - vymazání",
+          "prefix": "TS.04.04",
+          "description": "<p>Vymaz&aacute;n&iacute; formul&aacute;ře</p>",
+          "tcList": [
+          {
+          "tc": {
+            "name": "Vymazání kompletního formuláře",
+            "prefix": "TC.04.04.01",
+            "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Jsou zvoleny/nastaveny položky:</p><ul><li>FAV</li><li>16</li><li>bakal&aacute;řsk&yacute;</li><li>0123</li><li>prezenčn&iacute;</li></ul><p>Je zvolen <strong>Zahraničn&iacute; student</strong>.</p><p>Po stisku <strong>Generuj osobn&iacute; č&iacute;slo</strong> je toto vygenerov&aacute;no a zobrazeno dole.</p>",
+            "description": "<p>V&scaron;echny položky byly spr&aacute;vně zad&aacute;ny a je vygenerov&aacute;no v&yacute;sledn&eacute; osobn&iacute; č&iacute;slo.<br />Po stisku <strong>Vymaž</strong> se mus&iacute; v&scaron;echny položky nastavit na poč&aacute;tečn&iacute; hodnoty.</p>",
+            "importance": "medium",
+            "nature": "functional",
+            "type": "compliance",
+            "steps": [
+              {
+                "action": "<p>Stisk tlač&iacute;tka <strong>Vymaž</strong></p>",
+                "expected_result": "<p>V&yacute;běrov&yacute; seznam <strong>Fakulta</strong> bude nastaven na <strong>--- neuvedeno ---</strong></p>"
+              },              {
+                "action": "<p>Vstupn&iacute; pole <strong>Rok n&aacute;stupu na ZČU</strong> bude vymaz&aacute;no a bude v něm n&aacute;pověda 08</p>",
+                "expected_result": "<p>Vstupn&iacute; pole <strong>Rok n&aacute;stupu na ZČU</strong> bude vymaz&aacute;no a bude v něm n&aacute;pověda 08</p>"
+              },              {
+                "action": "<p>V&yacute;běrov&yacute; seznam <strong>Typ studia</strong> bude nastaven na <strong>bakal&aacute;řsk&yacute;</strong></p>",
+                "expected_result": "<p>V&yacute;běrov&yacute; seznam <strong>Typ studia</strong> bude nastaven na <strong>bakal&aacute;řsk&yacute;</strong></p>"
+              },              {
+                "action": "<p>Vstupn&iacute; pole <strong>Pořadov&eacute; č&iacute;slo</strong> bude vymaz&aacute;no a bude v něm n&aacute;pověda 0001</p>",
+                "expected_result": "<p>Vstupn&iacute; pole <strong>Pořadov&eacute; č&iacute;slo</strong> bude vymaz&aacute;no a bude v něm n&aacute;pověda 0001</p>"
+              },              {
+                "action": "<p>V bloku radio-buttonů <strong>Forma studia</strong> nebude vybr&aacute;na ž&aacute;dn&aacute; hodnota</p>",
+                "expected_result": "<p>V bloku radio-buttonů <strong>Forma studia</strong> nebude vybr&aacute;na ž&aacute;dn&aacute; hodnota</p>"
+              },              {
+                "action": "<p>Check-box <strong>Zahraničn&iacute; student</strong> nebude vybr&aacute;n</p>",
+                "expected_result": "<p>Check-box <strong>Zahraničn&iacute; student</strong> nebude vybr&aacute;n</p>"
+              },              {
+                "action": "<p>Vygenerovan&eacute; osobn&iacute; č&iacute;slo je kompletně vymaz&aacute;no.</p>",
+                "expected_result": "<p>Vygenerovan&eacute; osobn&iacute; č&iacute;slo je kompletně vymaz&aacute;no.</p>"
+              }
+            ],
+            "verified_requirements": [ ]
+            }
+          },
+          {
+          "tc": {
+            "name": "Vymazání formuláře s chybou",
+            "prefix": "TC.04.04.02",
+            "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Generovani</p><p>Ve vstupn&iacute;m poli <strong>Rok n&aacute;stupu na ZČU</strong> je hodnota <strong>sto</strong></p><p>Na nastaven&iacute; ostatn&iacute;ch položek nez&aacute;lež&iacute;.</p><p>Po stisku <strong>Generuj osobn&iacute; č&iacute;slo</strong> je:</p><ul><li>vstupn&iacute; pole s hodnotou <strong>sto </strong>červeně or&aacute;mov&aacute;no</li><li>vpravo se v červen&eacute;m r&aacute;mečku objev&iacute; <strong>Nen&iacute; dekadick&eacute; č&iacute;slo</strong></li><li>zcela dole bude červen&eacute; chybov&eacute; hl&aacute;&scaron;en&iacute; <strong><strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong></strong></li></ul>",
+            "description": "<p>Vyplněn&yacute; formul&aacute;ř obsahuje chybov&eacute; hl&aacute;&scaron;en&iacute;.</p><p>Toto hl&aacute;&scaron;en&iacute; mus&iacute; b&yacute;t po stisku <strong>Vymaž </strong>vymaz&aacute;no.</p>",
+            "importance": "medium",
+            "nature": "functional",
+            "type": "compliance",
+            "steps": [
+              {
+                "action": "<p>Stisk tlač&iacute;tka <strong>Vymaž</strong></p>",
+                "expected_result": "<p>Vstupn&iacute; pole <strong>Rok n&aacute;stupu na ZČU </strong>je vymaz&aacute;no a obsahuje n&aacute;povědu 08</p>"
+              },              {
+                "action": "<p>Vstupn&iacute; pole <strong>Rok n&aacute;stupu na ZČU</strong> nen&iacute; červeně or&aacute;mov&aacute;no</p>",
+                "expected_result": "<p>Vstupn&iacute; pole <strong>Rok n&aacute;stupu na ZČU</strong> nen&iacute; červeně or&aacute;mov&aacute;no</p>"
+              },              {
+                "action": "<p>Chybov&eacute; hl&aacute;&scaron;en&iacute;&nbsp;<strong>Nen&iacute; dekadick&eacute; č&iacute;slo</strong> je vymaz&aacute;no.</p>",
+                "expected_result": "<p>Chybov&eacute; hl&aacute;&scaron;en&iacute;&nbsp;<strong>Nen&iacute; dekadick&eacute; č&iacute;slo</strong> je vymaz&aacute;no.</p>"
+              },              {
+                "action": "<p>Chybov&eacute; hl&aacute;&scaron;en&iacute; <strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong> zcela dole je vymaz&aacute;no</p>",
+                "expected_result": "<p>Chybov&eacute; hl&aacute;&scaron;en&iacute; <strong>Chybn&eacute; vstupy - opravte pros&iacute;m zv&yacute;razněn&eacute; položky</strong> zcela dole je vymaz&aacute;no</p>"
+              }
+            ],
+            "verified_requirements": [ ]
+            }
+          }
+        ]
+        }
+      }
+    ]
+    }
+  },
+  {
+    "ts": {
+      "name": "Nápověda",
+      "prefix": "TS.05",
+      "description": "<p>Testy na str&aacute;nce <strong>N&aacute;pověda</strong></p>",
+      "tcList": [
+      {
+        "tc": {
+          "name": "Odkaz na Generování",
+          "prefix": "TC.05.01",
+          "prerequisite": "<p>Je zobrazena str&aacute;nka http://oks.kiv.zcu.cz/OsobniCislo/Napoveda</p>",
+          "description": "<p>Spr&aacute;vnost odkazu na str&aacute;nku <strong>Generov&aacute;n&iacute;</strong></p>",
+          "importance": "medium",
+          "nature": "functional",
+          "type": "compliance",
+          "steps": [
+            {
+              "action": "<p>Kliknut&iacute; na odkaz <strong>na str&aacute;nce generov&aacute;n&iacute;</strong></p>",
+              "expected_result": "<p>Zobraz&iacute; se str&aacute;nka <strong>Generov&aacute;n&iacute;</strong> - oks.kiv.zcu.cz/OsobniCislo/Generovani</p>"
+            }
+          ],
+          "verified_requirements": [ ]
+          }
+      }
+    ]
+    }
+  }
+]

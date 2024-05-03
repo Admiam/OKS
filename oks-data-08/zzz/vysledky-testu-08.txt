@@ -1,0 +1,4 @@
+Celkem spusteno: 0
+Proslo:          0
+Selhalo:         0
+Preruseno:       0

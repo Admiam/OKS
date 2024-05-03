@@ -1,0 +1,42 @@
+Start: TC.01.01.01: Happy day scenario
+End: TC.01.01.01: Happy day scenario -> OK
+Start: TC.01.01.02: Vymazani formulare
+End: TC.01.01.02: Vymazani formulare -> OK
+Start: TC.04.02.01.03: FEK
+End: TC.04.02.01.03: FEK -> FAILED: expected: <K15B0123P> but was: <E15B0123P>
+Start: TC.04.02.01.07: FPR
+End: TC.04.02.01.07: FPR -> FAILED: expected: <R15B0123P> but was: <P15B0123P>
+Start: TC.04.02.02.03: rok 99
+End: TC.04.02.02.03: rok 99 -> FAILED: expected: <A99N9876K> but was: <A00N9876k>
+Start: TC.04.02.05.02: Kombinovana forma
+End: TC.04.02.05.02: Kombinovana forma -> FAILED: expected: <Z20B0101K> but was: <Z20B0101k>
+Start: TC.04.02.06.02: Zahranicni student ANO
+End: TC.04.02.06.02: Zahranicni student ANO -> FAILED: expected: <S15B0001PI> but was: <S15B0001P>
+Start: TC.04.03.01.01: Fakulta nevybrana - chybove hlaseni
+End: TC.04.03.01.01: Fakulta nevybrana - chybove hlaseni -> FAILED: expected: <true> but was: <false>
+Start: TC.04.03.03.03: Poradove cislo 0
+End: TC.04.03.03.03: Poradove cislo 0 -> FAILED: Chyba neni spravne zobrazena (3 failures)
+	Chyba poradi ==> expected: <true> but was: <false>
+	Chyba celkova ==> expected: <true> but was: <false>
+	Vysledek ==> expected: <false> but was: <true>
+Start: TC.04.03.03.04: Poradove cislo 00
+End: TC.04.03.03.04: Poradove cislo 00 -> FAILED: Chyba neni spravne zobrazena (3 failures)
+	Chyba poradi ==> expected: <true> but was: <false>
+	Chyba celkova ==> expected: <true> but was: <false>
+	Vysledek ==> expected: <false> but was: <true>
+Start: TC.04.03.03.05: Poradove cislo 000
+End: TC.04.03.03.05: Poradove cislo 000 -> FAILED: Chyba neni spravne zobrazena (3 failures)
+	Chyba poradi ==> expected: <true> but was: <false>
+	Chyba celkova ==> expected: <true> but was: <false>
+	Vysledek ==> expected: <false> but was: <true>
+Start: TC.04.03.03.06: Poradove cislo 0000
+End: TC.04.03.03.06: Poradove cislo 0000 -> FAILED: Chyba neni spravne zobrazena (3 failures)
+	Chyba poradi ==> expected: <true> but was: <false>
+	Chyba celkova ==> expected: <true> but was: <false>
+	Vysledek ==> expected: <false> but was: <true>
+Start: TC.04.04.01: Vymazani priznaku zahranicni student
+End: TC.04.04.01: Vymazani priznaku zahranicni student -> FAILED: expected: <false> but was: <true>
+Celkem spusteno: 13
+Proslo:          2
+Selhalo:         11
+Preruseno:       0
